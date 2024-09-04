@@ -1,17 +1,16 @@
+//y=f(x)%7 for first sunday, ex: f(1)%7 = 0, f(2)%7 = 6
 public class PerpetualCalendar {
     public static void main(String[] args) {
         int daysInMonth = 31;
-        int firstSunday = 6;
+        int firstSunday = 1;
         printCalendar(daysInMonth, firstSunday);
     }
 
     public static void printCalendar(int daysInMonth, int firstSunday) {
-        // Print the header
         System.out.println("  Sun    Mon    Tue    Wed    Thu    Fri    Sat");
         System.out.println("+------+------+------+------+------+------+------+");
-
         for (int i = 1; i < firstSunday; i++) {
-            System.out.print("|" + padded( 0, 6));
+            System.out.print("|" + padded(0, 6));
         }
 
         for (int day = 1; day <= daysInMonth; day++) {
