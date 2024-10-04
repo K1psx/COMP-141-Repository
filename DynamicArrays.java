@@ -19,10 +19,10 @@ public class DynamicArrays {
     private static final int DEFAULT_SIZE = 4;
 
     // The underlying array for this class */
-    private String[] foundation;
+    private final String[] foundation;
 
     // How many positions in the foundation array are used? */
-    private int occupancy;
+    private final int occupancy;
 
 
     // Full constructor.
@@ -69,6 +69,7 @@ public class DynamicArrays {
             for (int i = 0; i < occupancy && !found; i++) {
                 if (foundation[i] != null && foundation[i].equals(target)) {
                     found = true;
+                    break;
                 }
             }
         }
